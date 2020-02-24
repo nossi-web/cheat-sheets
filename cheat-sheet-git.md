@@ -73,4 +73,11 @@ Here's what that would look like,
 	$ git merge dev -m "[message about branch merge]"
 
 
+
+To get a list of all the branches, use the following, be aware though, that this is not the norm for larger projects, as in the real world on a full scale web application in production, there will be hundreds of branches. so tread carefully. 
+
+	git branch -r | grep -v '\->' | while read remote; do git branch --track "${remote#origin/}" "$remote"; done
+	git fetch --all
+	git pull --all
+
 	
