@@ -3,7 +3,7 @@
 
 Remember, a typical workflow goes like this, 
 
-code -> test -> code -> test -> code -> test REPO
+code -> test -> -> save -> code -> test -> save -> code -> test -> save --> REPO
 
 Basic Repo workflow:
 1) ADD modified files to the repo
@@ -72,6 +72,17 @@ Here's what that would look like,
 	$ git checkout [your-branch]
 	$ git merge dev -m "[message about branch merge]"
 
+
+ideally when working on a project, you will have to merge in the changes from someone elses branch. 
+to get a list of all the available branches:
+
+	$ git branch -r
+
+then you can check them out locally like this:
+
+	$ git checkout -b LocalName origin/remoteBranchName
+
+then follow the merge procedure listed a few commands back.
 
 
 To get a list of all the branches, use the following, be aware though, that this is not the norm for larger projects, as in the real world on a full scale web application in production, there will be hundreds of branches. so tread carefully. 
