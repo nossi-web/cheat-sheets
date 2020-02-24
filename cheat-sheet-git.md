@@ -80,4 +80,9 @@ To get a list of all the branches, use the following, be aware though, that this
 	git fetch --all
 	git pull --all
 
+also, it should be noted that
 	
+	git fetch --all
+	git remote update
+
+are an equivalent strategy
