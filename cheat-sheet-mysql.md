@@ -3,6 +3,35 @@
 =====================
 
 
+To begin, you'll want to set up an SSH Tunnel through to the Vagrant Box (Scotch Box). This will allow you to connect any MySQL DB Tools to the localhost instead of the 192.168.33.10 IP address for the Scotch Box. 
+If your tool of choice has connect to DB via SSH, bonus points. 
+Some of the VSCode Extensions I've seen do not. [sad face]
+So yay! You get to learn how to ssh tunnel!
+
+	$ ssh -v -L 3306:127.0.0.1:3306 vagrant@192.168.33.10
+
+
+
+Once you've started your Scotch Box with the following command:
+
+	$ vagrant up
+
+You're ready to ssh into the Box Of Scotch with this command: 
+
+	$ vagrant ssh
+
+Notice the prompt change to something like:
+
+	vagrant@scotchbox:~$
+
+Now you're in the Scotch Box. Log in to MySQL using the following command: 
+
+	$ mysql -u root -proot
+
+You'll notice the prompt change to:
+
+	mysql>
+
 
 All the commands to issue from the 
 
