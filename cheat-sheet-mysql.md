@@ -97,7 +97,7 @@ You must make sure that the values are in the same order as the specified column
 		firstName,
 		email,
 		userProfileImage,
-		address,
+		address
 		) values (
 		'Smith',
 		'Sammy',
